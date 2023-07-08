@@ -1,0 +1,21 @@
+var containsDuplicate = function(nums) {
+    console.log('our array', nums);
+
+    const checkedNums = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        console.log('each number!!', nums[i]);
+        // checkedNums.push(nums[i])
+        if(checkedNums.includes(nums[i])) {
+            console.log('OMG FOUND DUPLIOCATE!!!!!!!', nums[i])
+            return true
+        } else {
+            checkedNums.push(nums[i])
+        }
+    }
+
+    return false
+};
+
+
+console.log('answer!!!', containsDuplicate([1,2,3,1]))
